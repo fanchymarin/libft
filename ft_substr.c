@@ -6,13 +6,13 @@
 /*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:17:33 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/24 16:36:25 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2022/03/24 18:10:20 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strlen(char const *str)
+static size_t	ft_strlen2(char const *str)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		i;
 	int		slen;
 
-	slen = ft_strlen(s);
+	slen = ft_strlen2(s);
 	if (len < slen)
 		p = (char *) malloc(sizeof(char) * len + 1);
 	else
