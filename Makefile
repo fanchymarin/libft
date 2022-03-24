@@ -3,5 +3,7 @@ OBJ = *.o
 
 libft: $(OBJ)
 	ar rcs libft.a *.o
-$(OBJ): $(FUNC) libft.h
+$(OBJ): $(FUNC)
 	gcc -c -Wall -Wextra -Werror *.c
+clean:
+	rm *.o
