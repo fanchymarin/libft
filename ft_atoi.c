@@ -6,7 +6,7 @@
 /*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:16:31 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/24 16:21:52 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2022/03/25 13:16:54 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,12 @@ int	ft_atoi(const char *str)
 	while (*str >= 48 && *str <= 57)
 	{
 		num = num * 10 + (*str - 48);
+		if (*str - 48 != num % 10 && num != -2147483648)
+		{
+			if (neg == -1)
+				return (0);
+			return (-1);
+		}
 		++str;
 	}
 	return (num * neg);

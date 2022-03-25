@@ -6,7 +6,7 @@
 /*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 12:45:24 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/24 16:24:34 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2022/03/24 18:59:28 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	p = dst;
 	if (!dst && !src)
 		return (0);
+	if (len == 0)
+		return (dst);
 	if (dst < src)
 	{
 		while (len--)

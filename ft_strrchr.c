@@ -6,7 +6,7 @@
 /*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 19:45:03 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/24 18:08:51 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2022/03/24 19:57:51 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	strlen = ft_strlen2(s);
 	s = &s[strlen];
-	while (strlen)
+	while (strlen + 1)
 	{
 		if (*s == c)
 		{

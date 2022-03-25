@@ -6,7 +6,7 @@
 /*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:17:33 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/24 18:17:48 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2022/03/25 13:35:03 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	slen;
 
 	slen = ft_strlen2(s);
+	if (start >= slen)
+		return (p = (char *) malloc(sizeof(char)));
 	if (len < slen)
 		p = (char *) malloc(sizeof(char) * len + 1);
 	else

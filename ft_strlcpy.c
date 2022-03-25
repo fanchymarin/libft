@@ -6,7 +6,7 @@
 /*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 14:11:07 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/24 16:41:02 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2022/03/25 12:34:21 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
 	i = 0;
 	if (dstsize < 1)
 		return (ft_strlen(src));
-	while (i < (dstsize - 1))
+	while (i < (dstsize - 1) && src[i])
 	{
 		dst[i] = src[i];
 		i++;
