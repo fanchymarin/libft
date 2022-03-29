@@ -6,7 +6,7 @@
 /*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 15:05:18 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/28 19:26:12 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2022/03/29 17:22:32 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ static char	**ft_allocdbpt(char const *s, char c)
 			++s;
 	}
 	p = (char **) malloc(sizeof(char *) * (count + 1));
+	if (!p)
+		return (0);
 	p[count] = 0;
 	return (p);
 }
