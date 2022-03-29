@@ -6,28 +6,20 @@
 /*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:43:06 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/24 18:06:49 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2022/03/28 15:55:31 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	ft_strlen2(char const *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		++i;
-	return (i);
-}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*p;
 	int		i;
 
-	p = (char *) malloc(sizeof(char) * (ft_strlen2(s1) + ft_strlen2(s2)) + 1);
+	if (!s1 || !s2)
+		return (0);
+	p = (char *) malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)) + 1);
 	if (!p)
 		return (0);
 	i = 0;

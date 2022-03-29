@@ -6,11 +6,9 @@
 /*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:16:31 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/25 13:16:54 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2022/03/29 15:20:29 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

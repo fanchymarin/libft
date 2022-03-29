@@ -6,16 +6,16 @@
 /*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 19:31:20 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/24 16:24:50 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2022/03/29 15:23:34 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
 	char	*p;
 
+	if (c > 255)
+		c -= 256;
 	while (*s)
 	{
 		if (*s == c)

@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/21 14:17:41 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/25 17:42:10 by fmarin-p         ###   ########.fr       */
+/*   Created: 2022/03/28 18:36:15 by fmarin-p          #+#    #+#             */
+/*   Updated: 2022/03/28 19:04:04 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-size_t	ft_strlen(const char *str)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		++i;
-	return (i);
+	if (n == -2147483648)
+	{
+		write (fd, "-2", 2);
+		n = 147483648;
+	}
+	if (n < 0)
+	{
+		n *= -1;
+		write (fd, "-", 1);
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+	{
+		n += 48;
+		write (fd, &n, 1);
+	}
 }
