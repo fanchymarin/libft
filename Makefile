@@ -6,7 +6,7 @@
 #    By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/30 15:51:58 by fmarin-p          #+#    #+#              #
-#    Updated: 2022/03/30 16:02:43 by fmarin-p         ###   ########.fr        #
+#    Updated: 2022/03/30 16:15:25 by fmarin-p         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ $(NAME): $(OBJ)
 $(OBJ): $(FUNC) 
 	@gcc -c -Wall -Wextra -Werror $(FUNC)
 
-bonus: $(OBJBONUS) $(OBJ)
+bonus: .
+.:$(OBJBONUS) $(OBJ)
 	@ar rcs $(NAME) $(OBJBONUS) $(OBJ)
 
 $(OBJBONUS): $(BONUS) 
