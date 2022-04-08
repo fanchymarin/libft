@@ -6,7 +6,7 @@
 /*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 14:23:59 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/24 16:22:13 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2022/04/08 12:11:26 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*p2;
 	int		i;
 
+	if (size > ((size_t) - 1)/2 && count > ((size_t) - 1)/2)
+		return (0);
 	p = (void *)malloc(size * count);
 	if (!p)
 		return (0);
