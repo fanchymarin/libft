@@ -1,5 +1,9 @@
 # Libft - Your Custom C Library - ⭐Grade 125/100
 
+#### Grade rating
+- ✅ = Okay project
+- ⭐ = Outstanding project
+
 This project consisted on elaborating a custom library with basic functions, mostly from libc. The Libft project allowed me to understand how these functions work, how to implement them, and how to use them.
 ## Functions from libc
 
