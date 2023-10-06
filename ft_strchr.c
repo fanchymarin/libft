@@ -3,32 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
+/*   By: fmarin-p <fmarin-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 19:31:20 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/29 15:23:34 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2023/10/06 18:51:52 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*p;
+	int	i;
 
-	if (c > 255)
-		c -= 256;
-	while (*s)
+	i = -1;
+	while (s[++i])
 	{
-		if (*s == c)
-		{
-			p = (char *)s;
-			return (p);
-		}
-		s++;
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
 	}
-	if (c == 0)
-	{
-		p = (char *)s;
-		return (p);
-	}
+	if (!(char)c)
+		return ((char *)&s[i]);
 	return (0);
 }
