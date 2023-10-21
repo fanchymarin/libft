@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmarin-p <fmarin-p@student.42madrid>       +#+  +:+       +#+        */
+/*   By: fmarin-p <fmarin-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 16:44:17 by fmarin-p          #+#    #+#             */
-/*   Updated: 2022/03/29 15:26:00 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2023/10/18 17:59:26 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (n == 0)
+	if (!n || !s)
 		return ;
 	while (n--)
 		*(char *)s++ = 0;
