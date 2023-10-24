@@ -6,13 +6,13 @@
 /*   By: fmarin-p <fmarin-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 14:46:00 by fmarin-p          #+#    #+#             */
-/*   Updated: 2023/10/24 14:46:20 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2023/10/24 14:49:21 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	print_bin(int n)
+void	ft_printbin(int n)
 {
 	int	i;
 
