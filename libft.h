@@ -6,7 +6,7 @@
 /*   By: fmarin-p <fmarin-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 15:50:08 by fmarin-p          #+#    #+#             */
-/*   Updated: 2023/10/21 02:42:20 by fmarin-p         ###   ########.fr       */
+/*   Updated: 2023/10/24 14:46:41 by fmarin-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 void	ft_freedp(char **dp);
+void	print_bin(int n);
 
 //GET_NEXT_LINE
 

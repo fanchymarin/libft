@@ -6,7 +6,7 @@
 #    By: fmarin-p <fmarin-p@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/30 15:51:58 by fmarin-p          #+#    #+#              #
-#    Updated: 2023/10/21 02:36:10 by fmarin-p         ###   ########.fr        #
+#    Updated: 2023/10/24 14:47:01 by fmarin-p         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ FUNC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
 	ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c \
 	ft_lstinit.c \
-	get_next_line.c get_next_line_utils.c ft_freedp.c ft_realloc.c
+	get_next_line.c get_next_line_utils.c ft_freedp.c ft_realloc.c \
+	ft_printbin.c
 
 OBJ = $(addprefix $(OBJDIR), $(FUNC:.c=.o))
 OBJDIR = obj/
